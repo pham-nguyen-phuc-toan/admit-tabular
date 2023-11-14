@@ -24,7 +24,7 @@ st.write(research)
 if gre is not None and toefl is not None and uni_rate is not None and sop is not None and lor is not None and cgpa is not None and research is not None:
     if st.button('Predict'):
         feature_vector = np.array([gre, toefl, uni_rate, sop, lor, cgpa, research]).reshape(1,-1)
-        result = str((model.predict(feature_vector[0]))[0])
+        result = str((model.predict(feature_vector)[0])[0])
 
         st.header('Result')
         st.text(result)
